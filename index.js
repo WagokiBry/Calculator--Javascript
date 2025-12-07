@@ -27,39 +27,61 @@ const plusButton = document.querySelector('.plus');
 
 
 
-// let calcObject = {
+let calcObject = {
 
 // inputA : parseInt(prompt("Enter first value")),
 // operator : prompt("Enter operator value",""),
 // inputB : parseInt(prompt("Enter second value")),
 
-// add(){
+add(){
 
-// let sum =  this.inputA + this.inputB;
-//    return calcObject["inputA"] = sum;
+let sum =  this.inputA + this.inputB;
+   return calcObject["inputA"] = sum;
     
-// },
+},
 
-// subtract(){
-//     let difference = this.inputA - this.inputB;
-//    return calcObject["inputA"] = difference;
-// },
+subtract(){
+    let difference = this.inputA - this.inputB;
+   return calcObject["inputA"] = difference;
+},
 
-// multiply(){
-//     let product = this.inputA * this.inputB;
-//    return calcObject["inputA"] = product; 
-// },
+multiply(){
+    let product = this.inputA * this.inputB;
+   return calcObject["inputA"] = product; 
+},
 
-// division(){
-//     let quotient = this.inputA / this.inputB;
-//    return calcObject["inputA"] = quotient; 
-// }
+division(){
+    let quotient = this.inputA / this.inputB;
+   return calcObject["inputA"] = quotient; 
+}
 
-// }
+}
 
 parentDiv.addEventListener("click",(e)=>{
    let value = e.target.textContent;
-    display.textContent += value
+   let currentDisplay = display.textContent;
+
+   if (value === "C"){
+    display.textContent = "0";
+    console.log("display cleared")
+   } else if(value === "del"){
+
+    if (currentDisplay.length > 1) {
+            display.textContent = currentDisplay.slice(0, -1);
+        } else {
+            // If only one character or empty, reset to "0"
+            display.textContent = "0";
+        }
+        console.log("Action: Deleted last character");
+        return;
+
+   }else if (currentDisplay === "0" && !isNaN(parseInt(value)) && value !== ".") {
+         display.textContent = value;
+    } else {
+        // Otherwise, append the new value
+        display.textContent += value;
+    }
+
     
 })
 
