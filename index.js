@@ -28,10 +28,9 @@ const plusButton = document.querySelector('.plus');
 
 
 let calcObject = {
-
-// inputA : parseInt(prompt("Enter first value")),
-// operator : prompt("Enter operator value",""),
-// inputB : parseInt(prompt("Enter second value")),
+"inputA" : null,
+"operator" : null,
+// inputB : null,
 
 add(){
 
@@ -82,8 +81,37 @@ parentDiv.addEventListener("click",(e)=>{
         display.textContent += value;
     }
 
+    propA(value)
+   operatOr(value)
+
+    if(calcObject["operator"] === "-"){
+        calcObject["inputA"] -= value
+    }
     
 })
+
+function propA(value){
+    
+    if(!isNaN(parseInt(value)) || value === "."){
+ calcObject["inputA"] += value;
+    
+    console.log(calcObject["inputA"]);
+    }
+   
+    
+}
+
+function operatOr(value){
+    if(value === "+" || value === "-" ||value === "/" ||value === "*"){
+ calcObject["operator"] = value;
+    }
+    
+    console.log(calcObject["operator"])
+   
+    }
+
+
+
 
 
 
