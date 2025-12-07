@@ -4,18 +4,26 @@ inputA : parseInt(prompt("Enter first value")),
 operator : prompt("Enter operator value",""),
 inputB : parseInt(prompt("Enter second value")),
 
-
 add(){
 
-    let sum =  this.inputA + this.inputB;
+let sum =  this.inputA + this.inputB;
    return calcObject["inputA"] = sum;
     
 },
 
 subtract(){
-  return this.inputA - this.inputB;
-   
+    let difference = this.inputA - this.inputB;
+   return calcObject["inputA"] = difference;
+},
 
+multiply(){
+    let product = this.inputA * this.inputB;
+   return calcObject["inputA"] = product; 
+},
+
+division(){
+    let quotient = this.inputA / this.inputB;
+   return calcObject["inputA"] = quotient; 
 }
 
 }
@@ -24,8 +32,8 @@ console.log(calcObject["inputA"])
 console.log(calcObject["operator"])
 console.log(calcObject["inputB"])
 
-console.log(calcObject.subtract())
-
+console.log(calcObject.division())
+console.log(calcObject["inputA"])
 
 
 
