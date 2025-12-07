@@ -1,7 +1,12 @@
-// add
-// subtract
-// multiply
-// divide
+let calcObject = {
+
+inputA : prompt("Enter first value",""),
+operator : prompt("Enter operator value",""),
+inputB : prompt("Enter second value","")
+
+}
+
+
 
 function add(a,b){
     return a + b
@@ -19,7 +24,3 @@ function divide(a,b){
     return a/b
 }
 
-console.log(add(5,7)) 
-console.log(subtract(9,4))
-console.log(multiply(8,9))
-console.log(divide(20,4))
