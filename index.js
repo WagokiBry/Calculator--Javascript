@@ -28,21 +28,9 @@ division(){
 
 }
 
-console.log(calcObject["inputA"])
-console.log(calcObject["operator"])
-console.log(calcObject["inputB"])
-
-console.log(calcObject.division())
-console.log(calcObject["inputA"])
 
 
 
 
-function multiply(a,b){
-    return a*b
-}
 
-function divide(a,b){
-    return a/b
-}
 

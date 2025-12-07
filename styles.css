@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.parentDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.parentDiv > div {
+   width: calc(30vw / 4);
+    
+}
